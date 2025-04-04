@@ -1,0 +1,9 @@
+<h1>Todo list:</h1>
+
+<ul>
+    {% for todo in todo_list %}
+        <li><b>{{ todo.title }}</b> - {{ todo.deadline }} | <a href="{% url 'todo_update' todo.pk %}"><b>Edit</b></a></li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'todo_create' %}">New task</a>
